@@ -1,0 +1,301 @@
+@charset "UTF-8";
+$breakpoints: ( 'sp': 412px, 'sm': 768px, 'md': 992px, 'lg': 1200px, 'xl': 1400px, 'xxl': 1600px, 'ret': 1920px) !default;
+@mixin respond-from($breakpoint) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+        // Prints a media query based on the value
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    } // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "+"Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+body {
+    *{
+        font-family: Helvetica, sans-serif;
+    }
+    width:100%;
+    position: relative;
+    @include respond-from('sm') {
+    }
+    h1 {
+        font-size: 22px;
+        font-weight: 700;
+        @include respond-from('sm') {
+            font-size: 18px;
+        }
+        @include respond-from('md') {
+            font-size: 24px;
+        }
+    }
+    h3 {
+        font-size: 16px;
+        margin: 0px 0px 25px 0px;
+        font-weight: 700;
+        @include respond-from('sm') {
+            font-size: 15px;
+        }
+        @include respond-from('md') {
+            font-size: 18px;
+        }
+    }
+    p {
+        font-size: 14px;
+        @include respond-from('sm') {
+            font-size: 13px; 
+        }
+        @include respond-from('md') {
+            font-size: 15px;
+        }
+    }
+}
+
+/**** navbar ****/
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.bg-light {
+    background-image: url(http://www.budbolagetab.se/images/templates/default/body-bg.gif);
+}
+
+.menu-logo {
+    vertical-align: middle;
+    border-style: none;
+    height: 42px;
+    @include respond-from('sm') {
+        height: 70px;
+    }
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: transparent;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-light  {
+    .navbar-nav .nav-link {
+        color: white;
+    }
+    .navbar-nav .nav-link:hover {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    .navbar-light .navbar-toggler {
+        border-color: transparent;
+    }
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgba(255, 255, 255, 1);
+}
+
+/**** navbar end ****/
+
+/**** Header index****/
+
+.carousel-item img {
+    height: 100%;
+}
+
+/**** Header index end ****/
+
+/**** Header index****/
+
+.header-thin {
+    margin-top: 20px;
+    @include respond-from('sm') {
+        .carousel {
+            position: relative;
+            margin: auto;
+        }
+    }
+    @include respond-from('md') {
+        .carousel {
+            position: relative;
+            margin: auto;
+        }
+    }
+    @include respond-from('xl') {
+        .carousel {
+            position: relative;
+            margin: auto;
+        }
+    }
+}
+
+/**** Header index end ****/
+
+/**** content-part ****/
+
+.content-part {
+    padding: 30px 0px;
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+    @include respond-from('sm') {
+        padding: 80px 0px;
+    }
+    .contact-persons-part{
+        margin: 20px 0px 5px 0px;
+        .contact-persons{
+            @include respond-from('sm') {
+                padding-right: 100px;
+            }
+            @include respond-from('md') {
+                padding-right: 180px;
+            }
+            .one-person{
+                margin: 0px 0px 25px 0px;
+            }
+            .mail {
+                margin: 7px 0px 0px 0px;
+            }
+            img{
+                width: 200px;
+            }
+            h3 {
+                margin: 20px 0px 5px 0px;
+            }
+            p {
+                margin: 0px 0px 0px 0px;
+            }
+        }
+    }
+    h1 {
+        margin: 0px 0px 20px 0px;
+    }
+    h3 {
+        margin: 0px 0px 10px 0px;
+    }
+    .jubileums-img {
+        width: 160px;
+    }
+    .jubileum{
+        margin-top: 10px;
+        p {
+            font-style: italic;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    }
+}
+/**** content-part end ****/
+
+
+/**** content-part index 1 ****/
+
+.content-part-index-1 {
+    padding: 30px 0px;
+    @include respond-from('sm') {
+        padding: 80px 0px;
+    }
+    .info-box {
+        margin: 30px 10px;
+        @include respond-from('sm') {
+            margin: 0px 0px;     
+        }
+    }
+    p {
+        @include respond-from('sm') {
+            padding-right: 50px;     
+        }
+        @include respond-from('lg') {
+            padding-right: 90px;     
+        }
+    }
+    .usp-icon{
+        &:before{
+            content: "";
+            display: block;
+            background: url("check-symbol.png") no-repeat;
+            width: 30px;
+            height: 24px;
+            float: left;
+            margin: 0 10px 0 0;
+        }
+    }
+}
+
+/**** content-part index 1 end ****/
+/**** content-part index 2 ****/
+
+.content-part-index-2 {
+    background: #393737; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #393737 0%, #323030 44%, #312f2f 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #393737 0%,#323030 44%,#312f2f 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #393737 0%,#323030 44%,#312f2f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#393737', endColorstr='#312f2f',GradientType=1 );
+    padding: 30px 0px;
+    color: white;
+    @include respond-from('sm') {
+        padding: 80px 0px;
+    }
+    .info-box {
+        margin: 30px 10px;
+        @include respond-from('sm') {
+            margin: 0px 0px;     
+        }
+        p {
+            @include respond-from('sm') {
+                padding-right: 50px;     
+            }
+            @include respond-from('lg') {
+                padding-right: 160px;     
+            }
+        }
+    }
+   
+}
+
+/**** content-part index 2 end ****/
+
+/**** footer ****/
+
+footer {
+    background-color: #e5e4e3;
+    padding: 30px 0px;
+    color: black;
+    @include respond-from('sm') {
+        padding: 50px 0px;
+    }
+    h3 {
+        margin: 5px 0px 5px 0px;
+    }
+    .instagram-text{
+        margin: 0px 0px 10px 0px;
+    }
+    .instagram-logo{
+        height: 40px;
+        margin: 0px 0px 40px 0px;
+    }
+    .copyright {
+        font-style: italic;
+        font-size: 12px;
+    }
+    @include respond-from('sm') {
+        font-size: 11px;
+    }
+    @include respond-from('md') {
+        font-size: 13px;
+    }
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+        :hover{
+            color: #333;
+        }
+        :active{
+            color: #333;
+        }
+}
+
+/**** footer end ****/
