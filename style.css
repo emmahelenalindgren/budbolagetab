@@ -153,6 +153,12 @@ body p {
   text-decoration: underline;
 }
 
+.content-part a img {
+  height: 10px;
+  margin: 0;
+  width: inherit;
+}
+
 @media (min-width: 768px) {
   .content-part {
     padding: 80px 0px;
