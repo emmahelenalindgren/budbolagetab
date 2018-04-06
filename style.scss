@@ -136,6 +136,10 @@ body {
 
 .content-part {
     padding: 30px 0px;
+        img {
+            width: 30px;
+            margin-bottom: 16px;
+        }
     a {
         color: #000;
         text-decoration: underline;
@@ -269,6 +273,23 @@ footer {
     h3 {
         margin: 5px 0px 5px 0px;
     }
+    p {
+        a {
+            color: rgb(65, 65, 65);
+            text-decoration: none;
+            :hover{
+                color: rgb(99, 99, 99) !important;
+                text-decoration: none;
+            }
+            :active{
+                color: rgb(99, 99, 99) !important;
+                text-decoration: none;
+            }   
+                img {
+                    height: 10px;
+                }    
+        }
+    }
     .instagram-text{
         margin: 0px 0px 10px 0px;
     }
@@ -286,16 +307,6 @@ footer {
     @include respond-from('md') {
         font-size: 13px;
     }
-    a {
-        color: #000;
-        text-decoration: underline;
-    }
-        :hover{
-            color: #333;
-        }
-        :active{
-            color: #333;
-        }
 }
 
 /**** footer end ****/

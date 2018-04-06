@@ -143,6 +143,11 @@ body p {
   padding: 30px 0px;
 }
 
+.content-part img {
+  width: 30px;
+  margin-bottom: 16px;
+}
+
 .content-part a {
   color: #000;
   text-decoration: underline;
@@ -318,6 +323,25 @@ footer h3 {
   margin: 5px 0px 5px 0px;
 }
 
+footer p a {
+  color: #414141;
+  text-decoration: none;
+}
+
+footer p a :hover {
+  color: #636363 !important;
+  text-decoration: none;
+}
+
+footer p a :active {
+  color: #636363 !important;
+  text-decoration: none;
+}
+
+footer p a img {
+  height: 10px;
+}
+
 footer .instagram-text {
   margin: 0px 0px 10px 0px;
 }
@@ -342,19 +366,6 @@ footer .copyright {
   footer {
     font-size: 13px;
   }
-}
-
-footer a {
-  color: #000;
-  text-decoration: underline;
-}
-
-footer :hover {
-  color: #333;
-}
-
-footer :active {
-  color: #333;
 }
 
 /**** footer end ****/
