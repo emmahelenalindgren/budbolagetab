@@ -150,7 +150,7 @@ body {
         } 
     }
     @include respond-from('sm') {
-        padding: 80px 0px;
+        padding: 60px 0px;
     }
     .contact-persons-part{
         margin: 20px 0px 5px 0px;
@@ -205,7 +205,7 @@ body {
 .content-part-index-1 {
     padding: 30px 0px;
     @include respond-from('sm') {
-        padding: 80px 0px;
+        padding: 60px 0px;
     }
     .info-box {
         margin: 30px 10px;
@@ -297,6 +297,8 @@ footer {
         }
     }
     .instagram-text{
+        font-style: italic;
+        font-size: 12px;
         margin: 0px 0px 10px 0px;
     }
     .instagram-logo{

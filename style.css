@@ -161,7 +161,7 @@ body p {
 
 @media (min-width: 768px) {
   .content-part {
-    padding: 80px 0px;
+    padding: 60px 0px;
   }
 }
 
@@ -232,7 +232,7 @@ body p {
 
 @media (min-width: 768px) {
   .content-part-index-1 {
-    padding: 80px 0px;
+    padding: 60px 0px;
   }
 }
 
@@ -350,6 +350,8 @@ footer p a img {
 }
 
 footer .instagram-text {
+  font-style: italic;
+  font-size: 12px;
   margin: 0px 0px 10px 0px;
 }
 
